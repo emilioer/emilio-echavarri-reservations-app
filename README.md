@@ -9,7 +9,7 @@ maven 3.6.3
 
 sptingboot 2.4.5
 
-git version 2.29.2.windows.2
+git 2.29.2.windows.2
 
 
 ## Data
