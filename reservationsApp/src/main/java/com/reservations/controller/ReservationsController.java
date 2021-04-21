@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.reservations.model.Reservations;
-//import com.reservations.repository.ReservationsRepository;
 import com.reservations.service.ReservationsService;
 
 import io.swagger.annotations.ApiOperation;
@@ -63,13 +62,13 @@ public class ReservationsController {
 		return new ResponseEntity<>(service.updateReservation(id, reservation), HttpStatus.OK);
 	}
 
-	@ApiOperation(value = "Delete an existing operation")
+	@ApiOperation(value = "Delete an existing reservation")
 	@RequestMapping(value = "/reservation/{id}", method = RequestMethod.DELETE)
 	public Map<String, Boolean> deleteReservation(@PathVariable(value = "id") int id) {
 		
 		Boolean deleted = service.deleteReservation(id);
-        Map <String, Boolean> response = new HashMap<>();
-        response.put("deleted", deleted);	
+        	Map <String, Boolean> response = new HashMap<>();
+        	response.put("deleted", deleted);	
         
 		return response; 
 	}
